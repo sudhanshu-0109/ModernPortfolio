@@ -27,7 +27,7 @@ export default function Skills() {
       period: "2024 – 2028",
       description:
         "Pursuing B.Tech in Computer Science Engineering with a current CGPA of 7.53 / 10. Focused on full-stack development, backend architecture, and building scalable software systems.",
-      logo: "/assets/google.svg",
+      logo: "/assets/parul-university.png",
     },
     {
       id: 2,
@@ -36,7 +36,7 @@ export default function Skills() {
       period: "2024",
       description:
         "Completed Class XII under the CBSE board with 75%. Built a strong foundation in mathematics, computer science, and problem-solving.",
-      logo: "/assets/youtube.svg",
+      logo: "/assets/indraprastha-school.jpg",
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ export default function Skills() {
       period: "2022",
       description:
         "Completed Class X under the CBSE board with 93%. Developed early interest in technology and analytical thinking.",
-      logo: "/assets/google.svg",
+      logo: "/assets/indraprastha-school.jpg",
     },
   ]);
 
@@ -112,7 +112,13 @@ export default function Skills() {
             >
               <div className="flex justify-between flex-col items-start lg:flex-row lg:items-center">
                 <div className="flex items-center gap-5">
-                  <img className="w-7" src={exp.logo} alt="" />
+                  <div className="w-12 h-12 lg:w-14 lg:h-14 shrink-0 rounded-full overflow-hidden bg-white">
+                    <img
+                      className="w-full h-full object-cover"
+                      src={exp.logo}
+                      alt={exp.company}
+                    />
+                  </div>
                   <h2 className="font-semibold text-white text-lg lg:text-xl">
                     {exp.role} at {exp.company}
                   </h2>
