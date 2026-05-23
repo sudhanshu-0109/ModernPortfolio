@@ -2,18 +2,19 @@
 
 A modern, illustration-style personal portfolio built with **React**, **Vite**, **Tailwind CSS**, and **Framer Motion**. It showcases my skills, projects, education, and contact information in a clean, responsive, and animated single-page experience.
 
+**Live Demo:** [modern-portfolio-iota-brown.vercel.app](https://modern-portfolio-iota-brown.vercel.app/)
+
 ---
 
 ## Live Links
 
 | Platform   | Link |
 | ---------- | ---- |
+| **Portfolio** | [modern-portfolio-iota-brown.vercel.app](https://modern-portfolio-iota-brown.vercel.app/) |
 | GitHub     | [github.com/sudhanshu-0109](https://github.com/sudhanshu-0109) |
 | LinkedIn   | [Sudhanshu Ranjan](https://www.linkedin.com/in/sudhanshu-ranjan-596358350) |
 | LeetCode   | [sudhanshuranjan0109](https://leetcode.com/u/sudhanshuranjan0109/) |
 | Email      | [sudhanshuranjan0109@gmail.com](mailto:sudhanshuranjan0109@gmail.com) |
-
-> Deploy the site with Vercel or Netlify and add your live URL here.
 
 ---
 
