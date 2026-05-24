@@ -7,6 +7,8 @@ import { SiLeetcode } from 'react-icons/si';
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 
+const RECIPIENT_EMAIL = "sudhanshuranjan0109@gmail.com";
+
 const socialLinks = [
   { Icon: BiLogoGmail, href: "mailto:sudhanshuranjan0109@gmail.com" },
   { Icon: IoLogoLinkedin, href: "https://www.linkedin.com/in/sudhanshu-ranjan-596358350" },
@@ -17,6 +19,35 @@ const socialLinks = [
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const name = formData.get("name")?.toString().trim();
+    const email = formData.get("email")?.toString().trim();
+    const website = formData.get("website")?.toString().trim() || "Not provided";
+    const message = formData.get("message")?.toString().trim();
+
+    const subject = `Portfolio Inquiry from ${name}`;
+    const body = `Hello Sudhanshu,
+
+I came across your portfolio and would like to connect with you.
+
+Name: ${name}
+Email: ${email}
+Website: ${website}
+
+Message:
+${message}
+
+---
+Sent via your portfolio contact form`;
+
+    const mailtoLink = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+  };
 
   return (
     <motion.div
@@ -43,11 +74,11 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className='lg:w-[40%]'
         >
-          <form className='w-full space-y-3 lg:space-y-5'>
-            <input className='border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full' type="text" placeholder='Your name' required />
-            <input className='border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full' type="email" placeholder='Email' required />
-            <input className='border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full' type="text" placeholder='Your website (If exists)' />
-            <textarea className='resize-none border-2 px-5 py-3 h-32 border-black placeholder:text-[#71717A]  rounded text-sm w-full' placeholder='How can I help?*'></textarea>
+          <form className='w-full space-y-3 lg:space-y-5' onSubmit={handleSubmit}>
+            <input className='border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full' type="text" name="name" placeholder='Your name' required />
+            <input className='border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full' type="email" name="email" placeholder='Email' required />
+            <input className='border-2 px-5 py-3 border-black rounded placeholder:text-[#71717A] text-sm w-full' type="text" name="website" placeholder='Your website (If exists)' />
+            <textarea className='resize-none border-2 px-5 py-3 h-32 border-black placeholder:text-[#71717A]  rounded text-sm w-full' name="message" placeholder='How can I help?*' required></textarea>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
