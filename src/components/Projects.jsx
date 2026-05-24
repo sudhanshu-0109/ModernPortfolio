@@ -8,7 +8,7 @@ const projects = [
     title: "healthcare+ – Transparent Hospital Workflow System",
     description:
       "Built an end-to-end healthcare ecosystem with role-based access for Doctors, Patients, and Admin staff. Features include smart appointment booking, digital prescriptions with medicine reminders, transparent billing, lab testing, and emergency ambulance dispatch using FCFS scheduling. Tech: Django REST Framework, React.js, SQLite, REST APIs.",
-    image: "/assets/project1.png",
+    image: "/assets/project-healthcare.png",
     link: "https://github.com/sudhanshu-0109/final_healthcare"
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     title: "Office Management System",
     description:
       "Developed a web application to automate office administration and employee management. Implemented secure CRUD operations, optimized relational database handling with PostgreSQL, and added automated business logic with real-time record updates. Tech: Django, PostgreSQL, Bootstrap.",
-    image: "/assets/project1.png",
+    image: "/assets/project-office.png",
     link: "https://github.com/sudhanshu-0109/Office_management_system"
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     title: "Sidcup Family Golf Clone",
     description:
       "Built a visually immersive frontend clone with advanced GSAP animations, smooth scroll-trigger effects, and responsive UI design optimized for desktop and mobile devices. Tech: HTML, CSS, JavaScript, GSAP.",
-    image: "/assets/project1.png",
+    image: "/assets/project-sidcup.png",
     link: "https://github.com/sudhanshu-0109/Sidcup-Family-Golf-clone"
   }
 ];
@@ -48,7 +48,7 @@ export default function Projects() {
           >
             <div className="lg:w-[500px] w-full rounded-2xl overflow-hidden">
               <img
-                className="w-full h-full hover:scale-105 transition-all duration-500 cursor-pointer object-cover"
+                className="w-full h-auto block hover:scale-105 transition-all duration-500 cursor-pointer"
                 src={project.image}
                 alt={project.title}
               />
