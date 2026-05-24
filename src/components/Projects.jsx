@@ -44,7 +44,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 80, damping: 10, delay: index * 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <div className="lg:w-[500px] w-full rounded-2xl overflow-hidden">
               <img

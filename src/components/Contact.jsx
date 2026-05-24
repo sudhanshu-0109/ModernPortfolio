@@ -18,7 +18,7 @@ const socialLinks = [
 
 export default function Contact() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: false, amount: 0.2 });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -60,7 +60,7 @@ Sent via your portfolio contact form`;
     >
       <motion.h2
         initial={{ y: -50, opacity: 0 }}
-        animate={isInView ? { y: 0, opacity: 1 } : { opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : { y: -50, opacity: 0 }}
         transition={{ duration: 0.8 }}
         className='text-2xl lg:text-4xl text-center'
       >
@@ -70,7 +70,7 @@ Sent via your portfolio contact form`;
       <div className='flex justify-between items-center mt-8 lg:mt-16 flex-col lg:flex-row'>
         <motion.div
           initial={{ x: -50, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
           transition={{ duration: 0.8 }}
           className='lg:w-[40%]'
         >
@@ -82,7 +82,7 @@ Sent via your portfolio contact form`;
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8 }}
               className='flex justify-between gap-3 lg:gap-5 flex-col lg:flex-row'
             >
@@ -115,7 +115,7 @@ Sent via your portfolio contact form`;
 
         <motion.div
           initial={{ x: 50, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : { x: 50, opacity: 0 }}
           transition={{ duration: 0.8 }}
           className='lg:w-1/2'
         >

@@ -9,7 +9,7 @@ export default function About() {
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: "spring", stiffness: 80, damping: 10 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         <img src="/assets/about-me.svg" alt="About Me Illustration" />
       </motion.div>
@@ -19,7 +19,7 @@ export default function About() {
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: "spring", stiffness: 80, damping: 10, delay: 0.2 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         <h2 className="lg:text-4xl text-2xl mt-4 lg:mt-0">
           About <span className="font-extrabold">Me</span>

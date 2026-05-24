@@ -58,7 +58,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           My <span className="font-extrabold">Skills</span>
         </motion.h2>
@@ -72,7 +72,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 5 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: skill.id * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               {skill.icon}
               <p>{skill.name}</p>
@@ -89,7 +89,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           My <span className="font-extrabold">Education</span>
         </motion.h2>
@@ -108,7 +108,7 @@ export default function Skills() {
                 damping: 10,
                 delay: index * 0.2,
               }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <div className="flex justify-between flex-col items-start lg:flex-row lg:items-center">
                 <div className="flex items-center gap-5">
