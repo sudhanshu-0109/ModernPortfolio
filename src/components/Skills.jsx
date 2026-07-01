@@ -26,7 +26,7 @@ export default function Skills() {
       role: "B.Tech in Computer Science Engineering",
       period: "2024 – 2028",
       description:
-        "Pursuing B.Tech in Computer Science Engineering with a current CGPA of 7.53 / 10. Focused on full-stack development, backend architecture, and building scalable software systems.",
+        "Pursuing B.Tech in Computer Science Engineering with a current CGPA of 7.75 / 10. Focused on full-stack development, backend architecture, and building scalable software systems.",
       logo: "/assets/parul-university.png",
     },
     {
