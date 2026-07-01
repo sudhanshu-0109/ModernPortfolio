@@ -65,7 +65,6 @@ export default function Navbar() {
 
         <motion.a
           href="/resume/sudhanshu_ranjan_resume.pdf"
-          download="Sudhanshu_Ranjan_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden relative lg:inline-block px-4 py-2 font-medium group"
@@ -116,7 +115,6 @@ export default function Navbar() {
               ))}
               <motion.a
                 href="/resume/sudhanshu_ranjan_resume.pdf"
-                download="Sudhanshu_Ranjan_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative inline-block px-4 py-2 font-semibold group"
